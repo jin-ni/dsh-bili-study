@@ -1,5 +1,5 @@
 /**
- * dsh-bili-study —— 浏览器半端（设置页「B站学习」）
+ * dsh-bili-learn —— 浏览器半端（设置页「B站学习」）
  * ============================================================================
  * client bundle 是自注册脚本（不是 ESM）：
  *   window.__ModuleLoader__.load({ id: '<包名>', factory: (require) => ({ inject, apply }) })
@@ -7,7 +7,7 @@
  * ============================================================================
  */
 window.__ModuleLoader__.load({
-  id: 'dsh-bili-study',
+  id: 'dsh-bili-learn',
   factory: (require) => {
     const React = require('react')
     const h = React.createElement
@@ -943,10 +943,10 @@ window.__ModuleLoader__.load({
       inject: ['slots'],
       apply(ctx) {
         const style = document.createElement('style')
-        style.setAttribute('data-plugin-css', 'dsh-bili-study')
+        style.setAttribute('data-plugin-css', 'dsh-bili-learn')
         style.textContent = CSS
         document.head.appendChild(style)
-        ctx.effect(() => () => style.remove(), 'dsh-bili-study: 设置页样式')
+        ctx.effect(() => () => style.remove(), 'dsh-bili-learn: 设置页样式')
 
         const slots = (typeof ctx.get === 'function' ? ctx.get('slots') : undefined) || ctx.slots
         if (!slots) return

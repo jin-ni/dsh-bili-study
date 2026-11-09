@@ -1,6 +1,6 @@
 {
-  "name": "dsh-bili-study",
-  "version": "0.4.0",
+  "name": "dsh-bili-learn",
+  "version": "0.4.1",
   "description": "DSH 插件：B站学习 —— 自己找课、读字幕学、写结构化笔记、出复习卡，按节奏每天学一点。",
   "keywords": [
     "dsh",

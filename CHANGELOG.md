@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1 — 2026-11-09
+
+- **包名改为 `dsh-bili-learn`**（npm 上的 `dsh-bili-study` 是别人的另一个插件，避免装错/更新错）。
+- GitHub 仓库名仍是 `jin-ni/dsh-bili-study`；数据目录、插件 id（`bili-study`）不变。
+- 已准备提交到 awesome-dsh-plugin 市场的条目（`tarball` 指向 v0.4.1 的 Release）。
+
 ## 0.4.0 — 2026-11-09
 
 - **内置 B 站扫码登录**：设置 → 环境 →「扫码登录」，手机 B站 App 扫码即可；

@@ -1,4 +1,7 @@
-# B站学习（dsh-bili-study）
+# B站学习（dsh-bili-learn）
+
+> 包名：`dsh-bili-learn`；GitHub 仓库名仍是 `jin-ni/dsh-bili-study`。
+> npm 上的 `dsh-bili-study` 是别人的另一个插件，别装错。
 
 一个 DSH 插件：**自己找课 / 读本地资料 → 读进去 → 写结构化笔记 → 出复习卡**，按节奏每天学一点。
 **学习内容、单元、看哪条视频、读哪份文件都由你定**；不想选的时候它才自己找。
@@ -63,11 +66,11 @@ dsh plugin --profile desktop add github:jin-ni/dsh-bili-study
 ```powershell
 # 1) 复制到稳定位置（插件不能依赖工作区还在）
 New-Item -ItemType Directory -Force "$env:USERPROFILE\.dsh\plugins" | Out-Null
-Remove-Item "$env:USERPROFILE\.dsh\plugins\dsh-bili-study" -Recurse -Force -ErrorAction SilentlyContinue
-Copy-Item -Recurse -Force "<本目录>" "$env:USERPROFILE\.dsh\plugins\dsh-bili-study"
+Remove-Item "$env:USERPROFILE\.dsh\plugins\dsh-bili-learn" -Recurse -Force -ErrorAction SilentlyContinue
+Copy-Item -Recurse -Force "<本目录>" "$env:USERPROFILE\.dsh\plugins\dsh-bili-learn"
 
 # 2) 装进 desktop profile（会自动把 bundle 加进 dsh.profile.bundles）
-dsh plugin --profile desktop add "link:$env:USERPROFILE\.dsh\plugins\dsh-bili-study"
+dsh plugin --profile desktop add "link:$env:USERPROFILE\.dsh\plugins\dsh-bili-learn"
 
 # 3) 重启一次 DeepSeek Harness
 ```
@@ -82,7 +85,7 @@ dsh plugin --profile desktop add "link:$env:USERPROFILE\.dsh\plugins\dsh-bili-st
 打包（用 `git archive`，自动排除 `.git` / `__pycache__`）：
 
 ```powershell
-git -C dsh-bili-study archive --format=zip --prefix=dsh-bili-study/ -o dsh-bili-study-0.4.0.zip HEAD
+git -C dsh-bili-study archive --format=zip --prefix=dsh-bili-learn/ -o dsh-bili-learn-0.4.1.zip HEAD
 ```
 
 对方：
