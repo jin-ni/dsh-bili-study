@@ -1,0 +1,79 @@
+{
+  "name": "dsh-bili-study",
+  "version": "0.4.0",
+  "description": "DSH 插件：B站学习 —— 自己找课、读字幕学、写结构化笔记、出复习卡，按节奏每天学一点。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "bilibili",
+    "study",
+    "notes",
+    "spaced-repetition"
+  ],
+  "license": "MIT",
+  "author": "jin-ni",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jin-ni/fuzzy-pancake.git"
+  },
+  "homepage": "https://github.com/jin-ni/fuzzy-pancake#readme",
+  "bugs": {
+    "url": "https://github.com/jin-ni/fuzzy-pancake/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib",
+    "reader",
+    "vendor",
+    "profile-template",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "dsh": ">=0.1.7-rc.1",
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    },
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-plugins"
+      ]
+    }
+  }
+}

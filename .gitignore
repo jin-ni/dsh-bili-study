@@ -1,0 +1,12 @@
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.tgz
+dist/
+.npm-cache/
+.pnpm-store/
+.DS_Store
+Thumbs.db
+*.log
+tmp-*.mjs

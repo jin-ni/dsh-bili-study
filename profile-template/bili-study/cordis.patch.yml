@@ -1,0 +1,111 @@
+# ============================================================================
+# 「B站学习」自动学习轮专用 profile（最小权限）
+# ============================================================================
+# 这一轮只做一件事：读插件递进来的字幕，输出一份 JSON 笔记。
+# 它**不需要**文件系统 / 命令 / 联网 / 子代理 / 技能 —— 所以全部关掉。
+#
+# ⚠️ 与「刷B站」的 bili-duty profile 的区别：
+#    · 那一轮靠 MCP 工具搜/读/写；我们这一轮是**纯提示词**（字幕由宿主预取），
+#      所以这里连 MCP 都不用挂，权限更小。
+#    · 模型必须走 deepseek-account（桌面端登录的账号额度），不能是 deepseek-official
+#      —— 后者要 DEEPSEEK_API_KEY，headless 里通常没有。
+# ============================================================================
+
+- id: credentials
+  disabled: false
+- id: authorization
+  disabled: false
+- id: deepseek-account
+  disabled: false
+- id: agent-default-model
+  config:
+    provider: deepseek-account
+    model: deepseek-flash
+
+# 命令执行
+- id: tool-bash
+  disabled: true
+- id: tool-pwsh
+  disabled: true
+- id: tool-jobs
+  disabled: true
+- id: jobs
+  disabled: true
+- id: tool-ralph
+  disabled: true
+
+# 文件系统：读 / 写 / 搜 —— 都不需要
+- id: tool-fs
+  disabled: true
+- id: tool-fs-search
+  disabled: true
+
+# 联网：字幕由宿主预取
+- id: tool-web
+  disabled: true
+- id: web-fetch-http
+  disabled: true
+- id: web-search-deepseek
+  disabled: true
+
+# 子代理 / 工作流：都能绕开工具限制
+- id: tool-subagent
+  disabled: true
+- id: tool-subagent-fork
+  disabled: true
+- id: tool-subagent-control
+  disabled: true
+- id: tool-subagent-list-agents
+  disabled: true
+- id: subagent
+  disabled: true
+- id: subagent-fork-in-process
+  disabled: true
+- id: subagent-spawn-in-process
+  disabled: true
+- id: workflow-ptc
+  disabled: true
+- id: ptc-runtime
+  disabled: true
+- id: tool-workflow
+  disabled: true
+
+# 技能：会读文件
+- id: skill
+  disabled: true
+- id: skill-filesystem
+  disabled: true
+- id: skill-badge
+  disabled: true
+- id: tool-skill
+  disabled: true
+
+# 自动读 AGENTS.md（会把上级目录的私人设定塞进上下文）
+- id: agent-instructions
+  disabled: true
+
+# 装插件 / 热重载 / 改配置
+- id: tool-plugin-manager
+  disabled: true
+- id: plugin-manager
+  disabled: true
+- id: hmr
+  disabled: true
+
+# 目标循环 / 计划模式 / 待办
+- id: goal
+  disabled: true
+- id: command-goal
+  disabled: true
+- id: tool-goal
+  disabled: true
+- id: goal-round-driver
+  disabled: true
+- id: plan-mode
+  disabled: true
+- id: tool-todo
+  disabled: true
+
+# MCP 资源读取
+- id: mcp-resources
+  disabled: true
