@@ -56,6 +56,8 @@ dsh plugin --profile desktop add github:jin-ni/fuzzy-pancake
 # web 版把 desktop 换成 web；装完重启一次 DSH
 ```
 
+> 如果 git 报 `schannel: SEC_E_NO_CREDENTIALS`，先 `git config --global http.sslBackend openssl` 再试。
+
 **本机 / 开发用 link**
 
 ```powershell
