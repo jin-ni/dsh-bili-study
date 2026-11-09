@@ -15,11 +15,11 @@
   "author": "jin-ni",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jin-ni/fuzzy-pancake.git"
+    "url": "git+https://github.com/jin-ni/dsh-bili-study.git"
   },
-  "homepage": "https://github.com/jin-ni/fuzzy-pancake#readme",
+  "homepage": "https://github.com/jin-ni/dsh-bili-study#readme",
   "bugs": {
-    "url": "https://github.com/jin-ni/fuzzy-pancake/issues"
+    "url": "https://github.com/jin-ni/dsh-bili-study/issues"
   },
   "type": "module",
   "main": "index.js",

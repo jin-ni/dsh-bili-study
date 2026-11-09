@@ -52,7 +52,7 @@
 **从 GitHub 装（推荐分享给别人）**
 
 ```powershell
-dsh plugin --profile desktop add github:jin-ni/fuzzy-pancake
+dsh plugin --profile desktop add github:jin-ni/dsh-bili-study
 # web 版把 desktop 换成 web；装完重启一次 DSH
 ```
 
