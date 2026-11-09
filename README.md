@@ -79,10 +79,10 @@ dsh plugin --profile desktop add "link:$env:USERPROFILE\.dsh\plugins\dsh-bili-st
 插件是自包含的：拷走整个目录即可，**不会带你的学习数据**（笔记/复习卡/资料库都在各自的
 `~/.dsh/bili-study/`，不在插件目录里）。
 
-打包（排除 `__pycache__` 即可，其余都带上）：
+打包（用 `git archive`，自动排除 `.git` / `__pycache__`）：
 
 ```powershell
-Compress-Archive -Path .\dsh-bili-study\* -DestinationPath .\dsh-bili-study-0.4.0.zip
+git -C dsh-bili-study archive --format=zip --prefix=dsh-bili-study/ -o dsh-bili-study-0.4.0.zip HEAD
 ```
 
 对方：
